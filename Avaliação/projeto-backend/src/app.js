@@ -22,12 +22,12 @@ app.use(validator({
 app.use('/api', routes);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
     next(createError(404));
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
     console.error(err);
 
     const message = err.message;

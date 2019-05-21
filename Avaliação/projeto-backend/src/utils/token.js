@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 /**
  * Chave de validação do JWT.
  */
-const SECRET_KEY = 'aqui vai a chave super secreta!';
+const SECRET_KEY = 'TnH_*-yq#6HfWn(48DwfWS`LXbNB#^';
 
 /**
  * Middleware que verifica a validade e decodifica o token de autenticação presente no header 'x-access-token'.
@@ -20,7 +20,7 @@ function authenticationMiddleware(request, response, next) {
         next();
     } catch (ex) {
         console.error('Não foi possível decodificar o token:', token, ex);
-        response.status(401).send('Acesso não autorizado.');
+        response.status(401).send('Acesso negado!');
     }
 }
 
